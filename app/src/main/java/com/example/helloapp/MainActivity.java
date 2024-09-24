@@ -8,6 +8,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,4 +26,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-}
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        return super.onCreateOptionsMenu (menu);
+    }
+
+    }
